@@ -1,4 +1,4 @@
-#Countdown.sj
+#Countdown.js
 A dead simple jquery countdown timer.
 No styling applied, this is left to the user.
 
