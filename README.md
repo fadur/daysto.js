@@ -11,7 +11,7 @@ No styling applied, this is left to the user.
 		<h2 data-target="2012, 12, 25"></h2>
 	</div> 
 	<script type="text/javascript" charset="utf-8">
-		$('#timer').countdown()
+		$('#timer h2').countdown()
 	</script>
 
 
