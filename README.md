@@ -1,6 +1,5 @@
 #Countdown.js
 A dead simple jquery countdown timer.
-Target date should be less than a mounth
 No styling applied, this is left to the user.
 
 

@@ -3,17 +3,18 @@
 
   timer = {
     current: function(target) {
-      var d, h, m, n, now, s, t;
+      var days, hours, m, markup, n, now, s, t;
       now = new Date();
       target = new Date(target);
       t = target.getTime() - now.getTime();
       n = new Date(t);
-      d = n.getDate() - 1;
-      h = n.getHours() - 1;
       m = n.getMinutes();
       s = n.getSeconds();
+      days = Math.round(t / 86400000);
+      hours = Math.round((t - (days * 86400000)) / 3600000);
       if (t > 0) {
-        return d + ' days ' + h + ' hours ' + m + ' minutes ' + s + ' seconds ';
+        markup = "<p><span class='days'>" + days + " Days</span><br /> <span class='clock'>" + hours + ":" + m + ":" + s + "</span></p>";
+        return markup;
       } else {
         return '0 days 0 hours 0 minutes 0 seconds ';
       }
@@ -24,9 +25,8 @@
     var el;
     el = this;
     return setInterval(function() {
-      return el.text(timer.current($(el).attr('data-target')));
+      return el.html(timer.current($(el).attr('data-target')));
     }, 1000);
   };
 
 }).call(this);
-
