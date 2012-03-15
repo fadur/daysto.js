@@ -1,5 +1,6 @@
-#Countdown.js
-A dead simple jquery countdown timer.
+#daysto.js
+A dead simple jquery countdown timer.  
+Count how many days there are to a given target.  
 No styling applied, this is left to the user.
 
 
